@@ -1,0 +1,14 @@
+version: "3"
+services:
+  db:
+    image: mariadb
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: vilsale
+      MYSQL_USER: vilsale-admin
+      MYSQL_PASSWORD: secret
+    command:
+    - --character-set-server=utf8mb4
+    - --collation-server=utf8mb4_unicode_ci
+    ports:
+    - 3306:3306
